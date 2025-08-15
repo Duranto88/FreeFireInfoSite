@@ -18,7 +18,7 @@ import random
 # === Settings ===
 MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
-RELEASEVERSION = "OB49"
+RELEASEVERSION = "OB50"
 USERAGENT = "Dalvik/2.1.0 (Linux; U; Android 13; CPH2095 Build/RKQ1.211119.001)"
 SUPPORTED_REGIONS = {"IND", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "PK", "CIS", "BD", "EUROPE"}
 
@@ -48,8 +48,8 @@ async def json_to_proto(json_data: str, proto_message: Message) -> bytes:
 
 def get_account_credentials(region: str) -> str:
     r = region.upper()
-    if r == "IND":
-        return "uid=3939412237&password=74C35008C7E8BE5B618F6B482EC73D840F863E2AF750C1317CA66D4CD74F19FB"
+    if r == "BD":
+        return "uid=4102706810&password=93BD80FC08645CDF542A3286F23BB0EA8F29310E6BABB03B482D0CF985E79CFC"
     elif r in {"BR", "US", "SAC", "NA"}:
         return "uid=3939493997&password=D08775EC0CCCEA77B2426EBC4CF04C097E0D58822804756C02738BF37578EE17"
     else:
